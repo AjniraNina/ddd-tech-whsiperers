@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Lentil Vegetarian Meals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        #app {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .meal {
+            width: 45%;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .meal h3 {
+            margin-top: 0;
+        }
+        #loader {
+            display: none;
+            text-align: center;
+        }
+        #error {
+            display: none;
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Simple Lentil Vegetarian Meals</h1>
+        <div id="content"></div>
+        <div id="loader">Loading...</div>
+        <div id="error"></div>
+    </div>
+    <script>
+        class AIHandler {
+            constructor(role, expectedType = 'text') {
+                this.role = role;
+                this.expectedType = expectedType;
+                this.elements = {
+                    app: document.getElementById('app'),
+                    content: document.getElementById('content'),
+                    loader: document.getElementById('loader'),
+                    error: document.getElementById('error')
+                };
+
+                Object.entries(this.elements).forEach(([key, el]) => {
+                    if (!el) throw new Error(`Required element #${key} not found`);
+                });
+            }
+
+            async generate(prompt) {
+                try {
+                    this._setLoading(true);
+                    const response = await fetch('/api/llm/interact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            role: this.role,
+                            prompt,
+                            expect: this.expectedType
+                        })
+                    });
+
+                    const result = await response.json();
+                    if (!result.success) throw new Error(result.error);
+                    return result.data;
+                } catch (error) {
+                    this._handleError(error);
+                    throw error;
+                } finally {
+                    this._setLoading(false);
+                }
+            }
+
+            _setLoading(isLoading) {
+                this.elements.loader.style.display = isLoading ? 'block' : 'none';
+                this.elements.content.style.opacity = isLoading ? '0.5' : '1';
+                this.elements.content.style.pointerEvents = isLoading ? 'none' : 'auto';
+            }
+
+            _handleError(error) {
+                console.error(error);
+                this.elements.error.textContent = error.message;
+                this.elements.error.style.display = 'block';
+                setTimeout(() => this.elements.error.style.display = 'none', 5000);
+            }
+        }
+
+        const ai = new AIHandler('a recipe generator');
+
+        window.onload = async () => {
+            try {
+                const meals = await ai.generate('Give me 5 simple lentil based vegetarian meals');
+                meals.forEach(meal => {
+                    const mealEl = document.createElement('div');
+                    mealEl.className = 'meal';
+                    mealEl.innerHTML = `
+                        <h3>${meal.name}</h3>
+                        <p>${meal.description}</p>
+                        <p><strong>Ingredients:</strong> ${meal.ingredients.join(', ')}</p>
+                        <p><strong>Instructions:</strong> ${meal.instructions}</p>
+                    `;
+                    ai.elements.content.appendChild(mealEl);
+                });
+            } catch (error) {
+                console.error(error);
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .post {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+        }
+        #loader {
+            display: none;
+        }
+        #error {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>#DDDPerth Social Media Feed</h1>
+        <div id="content"></div>
+        <div id="loader">Loading...</div>
+        <div id="error"></div>
+    </div>
+
+    <script>
+        class AIHandler {
+            constructor(role, expectedType = 'text') {
+                this.role = role;
+                this.expectedType = expectedType;
+                this.elements = {
+                    app: document.getElementById('app'),
+                    content: document.getElementById('content'),
+                    loader: document.getElementById('loader'),
+                    error: document.getElementById('error')
+                };
+                
+                Object.entries(this.elements).forEach(([key, el]) => {
+                    if (!el) throw new Error(`Required element #${key} not found`);
+                });
+            }
+
+            async generate(prompt) {
+                try {
+                    this._setLoading(true);
+                    const response = await fetch('https://api.socialmedia.com/posts', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            role: this.role,
+                            prompt,
+                            expect: this.expectedType
+                        })
+                    });
+                    
+                    const result = await response.json();
+                    if (!result.success) throw new Error(result.error);
+                    return result.data;
+                } catch (error) {
+                    this._handleError(error);
+                    throw error;
+                } finally {
+                    this._setLoading(false);
+                }
+            }
+
+            _setLoading(isLoading) {
+                this.elements.loader.style.display = isLoading ? 'block' : 'none';
+                document.querySelectorAll('.post').forEach(el => 
+                    el.style.opacity = isLoading ? '0.5' : '1'
+                );
+            }
+
+            _handleError(error) {
+                console.error(error);
+                this.elements.error.textContent = error.message;
+                this.elements.error.style.display = 'block';
+                setTimeout(() => this.elements.error.style.display = 'none', 5000);
+            }
+        }
+
+        const ai = new AIHandler('a social media post generator');
+
+        function updateFeed() {
+            ai.generate('Generate 10 social media posts for #DDDPerth').then(posts => {
+                const content = document.getElementById('content');
+                content.innerHTML = '';
+                posts.forEach(post => {
+                    const postEl = document.createElement('div');
+                    postEl.className = 'post';
+                    postEl.textContent = post;
+                    content.appendChild(postEl);
+                });
+            }).catch(error => {
+                console.error('Failed to update feed:', error);
+            });
+        }
+
+        setInterval(updateFeed, 10000);
+        updateFeed();
+    </script>
+</body>
+</html>

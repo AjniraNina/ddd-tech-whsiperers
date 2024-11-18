@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>If it ain't broke don't fix it</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        #app {
+            text-align: center;
+        }
+        #loader {
+            display: none;
+        }
+        #error {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="content">
+            <h1>If it ain't broke don't fix it</h1>
+            <button id="generate">Generate Similar Quote</button>
+        </div>
+        <div id="loader">Loading...</div>
+        <div id="error"></div>
+    </div>
+    <script>
+        class AIHandler {
+            constructor(role, expectedType = 'text') {
+                this.role = role;
+                this.expectedType = expectedType;
+                this.elements = {
+                    app: document.getElementById('app'),
+                    content: document.getElementById('content'),
+                    loader: document.getElementById('loader'),
+                    error: document.getElementById('error'),
+                    generate: document.getElementById('generate')
+                };
+                
+                Object.entries(this.elements).forEach(([key, el]) => {
+                    if (!el) throw new Error(`Required element #${key} not found`);
+                });
+
+                this.elements.generate.addEventListener('click', () => this.generate('Generate a quote similar to "If it ain\'t broke don\'t fix it"'));
+            }
+
+            async generate(prompt) {
+                try {
+                    this._setLoading(true);
+                    const response = await fetch('/api/llm/interact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            role: this.role,
+                            prompt,
+                            expect: this.expectedType
+                        })
+                    });
+                    
+                    const result = await response.json();
+                    if (!result.success) throw new Error(result.error);
+                    this.elements.content.innerHTML = `<h1>${result.data}</h1><button id="generate">Generate Similar Quote</button>`;
+                    this.elements.generate = document.getElementById('generate');
+                    this.elements.generate.addEventListener('click', () => this.generate('Generate a quote similar to "If it ain\'t broke don\'t fix it"'));
+                } catch (error) {
+                    this._handleError(error);
+                } finally {
+                    this._setLoading(false);
+                }
+            }
+
+            _setLoading(isLoading) {
+                this.elements.loader.style.display = isLoading ? 'block' : 'none';
+                this.elements.generate.style.opacity = isLoading ? '0.5' : '1';
+                this.elements.generate.style.pointerEvents = isLoading ? 'none' : 'auto';
+                document.querySelectorAll('button').forEach(el => 
+                    el.disabled = isLoading
+                );
+            }
+
+            _handleError(error) {
+                console.error(error);
+                this.elements.error.textContent = error.message;
+                this.elements.error.style.display = 'block';
+                setTimeout(() => this.elements.error.style.display = 'none', 5000);
+            }
+        }
+
+        const ai = new AIHandler('a quote generator');
+    </script>
+</body>
+</html>

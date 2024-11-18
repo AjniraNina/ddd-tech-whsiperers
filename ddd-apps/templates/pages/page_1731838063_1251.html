@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Story about DDD Perth</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        #app {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #content {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #loader {
+            display: none;
+            text-align: center;
+        }
+        #error {
+            display: none;
+            color: red;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Story about DDD Perth</h1>
+        <div id="content"></div>
+        <div id="loader">Loading...</div>
+        <div id="error"></div>
+        <button id="generate">Generate Story</button>
+    </div>
+
+    <script>
+        class AIHandler {
+            constructor(role, expectedType = 'text') {
+                this.role = role;
+                this.expectedType = expectedType;
+                this.elements = {
+                    app: document.getElementById('app'),
+                    content: document.getElementById('content'),
+                    loader: document.getElementById('loader'),
+                    error: document.getElementById('error'),
+                    generate: document.getElementById('generate')
+                };
+                
+                Object.entries(this.elements).forEach(([key, el]) => {
+                    if (!el) throw new Error(`Required element #${key} not found`);
+                });
+            }
+
+            async generate(prompt) {
+                try {
+                    this._setLoading(true);
+                    const response = await fetch('/api/llm/interact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            role: this.role,
+                            prompt,
+                            expect: this.expectedType
+                        })
+                    });
+                    
+                    const result = await response.json();
+                    if (!result.success) throw new Error(result.error);
+                    return result.data;
+                } catch (error) {
+                    this._handleError(error);
+                    throw error;
+                } finally {
+                    this._setLoading(false);
+                }
+            }
+
+            _setLoading(isLoading) {
+                this.elements.loader.style.display = isLoading ? 'block' : 'none';
+                this.elements.generate.style.opacity = isLoading ? '0.5' : '1';
+                this.elements.generate.style.pointerEvents = isLoading ? 'none' : 'auto';
+                this.elements.generate.disabled = isLoading;
+            }
+
+            _handleError(error) {
+                console.error(error);
+                this.elements.error.textContent = error.message;
+                this.elements.error.style.display = 'block';
+                setTimeout(() => this.elements.error.style.display = 'none', 5000);
+            }
+        }
+
+        const ai = new AIHandler('a story generator');
+
+        document.getElementById('generate').addEventListener('click', async () => {
+            try {
+                const story = await ai.generate('Tell me a story about DDD Perth');
+                ai.elements.content.textContent = story;
+            } catch (error) {
+                console.error(error);
+            }
+        });
+    </script>
+</body>
+</html>

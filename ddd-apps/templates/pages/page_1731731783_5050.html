@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .apple {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: #ff0800;
+            border-radius: 50%;
+        }
+        .apple::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: 40px;
+            width: 20px;
+            height: 20px;
+            background: #663300;
+            border-radius: 10px;
+        }
+        .apple::after {
+            content: "";
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 40px;
+            height: 70px;
+            background: #ff0800;
+            border-radius: 50%/0 0 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="apple"></div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: cover;
+        }
+        #app {
+            text-align: center;
+        }
+        #loader {
+            display: none;
+        }
+        #error {
+            color: red;
+            display: none;
+        }
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            display: none;
+        }
+        .popup img {
+            max-width: 90%;
+            max-height: 80%;
+        }
+        .popup .controls {
+            margin-top: 20px;
+        }
+        .popup .controls button {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button id="generate">Generate Illustration</button>
+        <div id="loader">Loading...</div>
+        <div id="error"></div>
+        <div class="popup" id="popup">
+            <img id="illustration" src="" alt="Illustration">
+            <div class="controls">
+                <button id="happier">Happier</button>
+                <button id="sadder">Sadder</button>
+                <button id="close">Close</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        class AIHandler {
+            constructor(role, expectedType = 'text') {
+                this.role = role;
+                this.expectedType = expectedType;
+                this.elements = {
+                    app: document.getElementById('app'),
+                    loader: document.getElementById('loader'),
+                    error: document.getElementById('error'),
+                };
+                Object.entries(this.elements).forEach(([key, el]) => {
+                    if (!el) throw new Error(`Required element #${key} not found`);
+                });
+            }
+
+            async generate(prompt) {
+                try {
+                    this._setLoading(true);
+                    const response = await fetch('/api/llm/interact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            role: this.role,
+                            prompt,
+                            expect: this.expectedType
+                        })
+                    });
+                    if (!response.ok) throw new Error('Failed to fetch illustration');
+                    const result = await response.json();
+                    if (!result.success) throw new Error(result.error);
+                    return result.data;
+                } catch (error) {
+                    this._handleError(error);
+                    throw error;
+                } finally {
+                    this._setLoading(false);
+                }
+            }
+
+            _setLoading(isLoading) {
+                this.elements.loader.style.display = isLoading ? 'block' : 'none';
+                document.querySelectorAll('button').forEach(el => 
+                    el.disabled = isLoading
+                );
+            }
+
+            _handleError(error) {
+                console.error(error);
+                this.elements.error.textContent = error.message;
+                this.elements.error.style.display = 'block';
+                setTimeout(() => this.elements.error.style.display = 'none', 5000);
+            }
+        }
+
+        const ai = new AIHandler('an illustrator');
+        const popup = document.getElementById('popup');
+        const illustration = document.getElementById('illustration');
+        let mood = 0;
+
+        document.getElementById('generate').addEventListener('click', async () => {
+            mood = 0;
+            const imgSrc = await ai.generate('Generate a neutral illustration');
+            illustration.src = imgSrc;
+            popup.style.display = 'flex';
+        });
+
+        document.getElementById('happier').addEventListener('click', async () => {
+            mood++;
+            const imgSrc = await ai.generate(`Generate a ${mood > 0 ? 'happier' : 'sadder'} illustration`);
+            illustration.src = imgSrc;
+        });
+
+        document.getElementById('sadder').addEventListener('click', async () => {
+            mood--;
+            const imgSrc = await ai.generate(`Generate a ${mood > 0 ? 'happier' : 'sadder'} illustration`);
+            illustration.src = imgSrc;
+        });
+
+        document.getElementById('close').addEventListener('click', () => {
+            popup.style.display = 'none';
+            document.body.style.backgroundImage = `url(${illustration.src})`;
+        });
+    </script>
+</body>
+</html>

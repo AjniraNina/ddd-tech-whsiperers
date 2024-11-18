@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: url('https://images.unsplash.com/photo-1560807707-8cc77767d783') no-repeat center center fixed; 
+            background-size: cover;
+        }
+        #app {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        #results {
+            display: none;
+            width: 80%;
+            margin-top: 20px;
+        }
+        #results div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>List Comparison App</h1>
+        <textarea id="listA" placeholder="Enter list A items here, separated by a comma"></textarea>
+        <textarea id="listB" placeholder="Enter list B items here, separated by a comma"></textarea>
+        <button id="compareBtn">Compare Lists</button>
+        <div id="results">
+            <div id="both">Items in both lists: </div>
+            <div id="onlyA">Items only in list A: </div>
+            <div id="onlyB">Items only in list B: </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('compareBtn').addEventListener('click', function() {
+            var listA = document.getElementById('listA').value.split(',').map(item => item.trim());
+            var listB = document.getElementById('listB').value.split(',').map(item => item.trim());
+
+            var both = listA.filter(value => listB.includes(value));
+            var onlyA = listA.filter(value => !listB.includes(value));
+            var onlyB = listB.filter(value => !listA.includes(value));
+
+            document.getElementById('both').textContent = 'Items in both lists: ' + both.join(', ');
+            document.getElementById('onlyA').textContent = 'Items only in list A: ' + onlyA.join(', ');
+            document.getElementById('onlyB').textContent = 'Items only in list B: ' + onlyB.join(', ');
+
+            document.getElementById('results').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

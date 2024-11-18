@@ -1,0 +1,10 @@
+project_root/
+├── app.py
+├── templates/
+│   ├── index.html
+│   └── pages/
+├── static/
+│   ├── css/
+│   └── js/
+├── test_runner.py
+└── requirements.txt 

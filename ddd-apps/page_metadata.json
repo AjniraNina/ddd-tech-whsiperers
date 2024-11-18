@@ -1,0 +1,390 @@
+{
+    "page_20241114_114551": {
+        "prompt": "create a new page that says IT WORKS in giant multicoloured letters",
+        "timestamp": "2024-11-14T11:45:51.114461"
+    },
+    "page_1731557021_7488": {
+        "prompt": "create a new page that says in giant letters \"IT STILL WORKS!\"",
+        "timestamp": 1731557021.1191697
+    },
+    "page_1731557510_4394": {
+        "prompt": "create a new page that says in giant letters \"IT STILL WORKS!\"",
+        "timestamp": 1731557510.1702487
+    },
+    "page_1731557589_7458": {
+        "prompt": "create a new page uses an llm to randomly generate a 100 word poem based on input in a textbox when the button is pressed",
+        "timestamp": 1731557589.8365223
+    },
+    "page_1731558715_1519": {
+        "prompt": "create a new page that says IT WORKS in giant letters that move across the screen like a ticker and loop",
+        "timestamp": 1731558715.6781642
+    },
+    "page_1731558793_3703": {
+        "prompt": "create a page that uses an llm to randomly generate a new 100 word story about a random fruit each time it opens",
+        "timestamp": 1731558793.2543824
+    },
+    "page_1731558978_4646": {
+        "prompt": "make a new page that is basically a personality quiz wherein you answer 5 questions and get a simple result at the end; it should be clever but fun and funny, not \"random lols\" but like actually intelligently revealing with a heft dose of humour, ill leave all the details up to you",
+        "timestamp": 1731558978.6218472
+    },
+    "page_1731561595_6767": {
+        "prompt": "make a page that says in giant letters IT WORKS and has the colours of individual letters changing in a pattern like theyre moving right across the letters",
+        "timestamp": 1731561595.004398
+    },
+    "page_1731561659_6374": {
+        "prompt": "make a page that has an input box and two buttons, one that says BETTER and one that says WORSE and whatever the user types in will be given to an llm to make better or worse and output underneath the box",
+        "timestamp": 1731561659.0971065
+    },
+    "page_1731563370_7360": {
+        "prompt": "make a new page that will have a textbox for the user to write something in and two buttons, one that says BETTER and one that says WORSE to improve or comically worsen the sentence",
+        "timestamp": 1731563370.638113
+    },
+    "page_1731563886_4962": {
+        "prompt": "make a page that is basically a mini rpg, it uses buttons on the screen to control the character and generates the world in ASCII bby asking for an initial ascii world and then whenever the used moves past the part thats been generates gets an llm to make the next part by asking for the ascii world; it will have a simple legend of characters so theres things to collect to gain power and things to battle wherein your power can be used to increase your odds of landing an attack; the enemies are always displayed as a number from 0 to 9 wherein the number determines how hard they are to beat; to win the game, the player must get to the princess which is guarded by monsters",
+        "timestamp": 1731563886.6494305
+    },
+    "page_1731564096_7483": {
+        "prompt": "create a simple runner game wherein the player uses the keyboard arrow keys to move left right and up for jump to jump between moving times that are scrolling across the screen, its randomly generated but always possible and shows llm generated phrases that are displayed on the screen as if theyre being yelled at the player from an invisible audience to encourage and discourage them",
+        "timestamp": 1731564097.0000181
+    },
+    "page_1731568160_1991": {
+        "prompt": "A page that says in glowing big colours and is animated to breathe \"the SMS works!\"",
+        "timestamp": 1731568160.0340858
+    },
+    "page_1731582692_6669": {
+        "prompt": "Make a page that has the words it works in the middle in giant letters and then a series of buttons under it that change the letters to be different kinds of very creative animations, colours and just interesting style differences",
+        "timestamp": 1731582692.3044012
+    },
+    "page_1731583863_6393": {
+        "prompt": "Make a page that has the words it works in the middle in giant letters and then a series of buttons under it that change the letters to be different kinds of very creative animations, colours and just interesting style differences",
+        "timestamp": 1731583863.1508958
+    },
+    "page_1731584083_7972": {
+        "prompt": "Make a chatbot with an llm integration that has conversational history but who's entirely mandate is to convince you to quit CS and IT stuff, career wise",
+        "timestamp": 1731584083.753143
+    },
+    "page_1731587544_2243": {
+        "prompt": "Make a page that takes user input and has two buttons; Make Worse and Make Pirate each of which will use an llm to change the text where it is into a worse written text or more piratey sounding text",
+        "timestamp": 1731587544.0053627
+    },
+    "page_1731587865_3686": {
+        "prompt": "Make a page that takes user input and has two buttons; Make Worse and Make Pirate each of which will use an llm to change the text where it is into a worse written text or more piratey sounding text",
+        "timestamp": 1731587865.0515203
+    },
+    "page_1731588130_1155": {
+        "prompt": "Make a page that takes user input and has two buttons; Make Worse and Make Pirate each of which will use an llm to change the text where it is into a worse written text or more piratey sounding text",
+        "timestamp": 1731588130.4880059
+    },
+    "page_1731589984_7856": {
+        "prompt": "Make a page that says in big glowing letters IT WORKS and it changes colour wherein the colours move to the right",
+        "timestamp": 1731589984.2814825
+    },
+    "page_1731590294_5270": {
+        "prompt": "Make a page that takes user input and has two buttons; Make Worse and Make Pirate each of which will use an llm to rewrite the text where it is into a worse written text or more piratey sounding text",
+        "timestamp": 1731590294.9770057
+    },
+    "page_1731590971_5329": {
+        "prompt": "Make a page that has a ball that travels the page and bounces off the corners like those old screensavers",
+        "timestamp": 1731590971.867783
+    },
+    "page_1731591236_4001": {
+        "prompt": "Make a chatbot with an llm integration that has conversational history but who's entirely mandate is to convince you to quit CS and IT stuff, career wise",
+        "timestamp": 1731591236.0872402
+    },
+    "page_1731591262_2666": {
+        "prompt": "Tell me what time it is in bosna,  Australia, and USA\nAnd also add another button that clears it all and makes it reset call it a planet reset ",
+        "timestamp": 1731591262.4816005
+    },
+    "page_1731591369_7848": {
+        "prompt": "Make an app that has a graph, that rises and shows why cats are better than dogs ",
+        "timestamp": 1731591369.8025377
+    },
+    "page_1731591487_6515": {
+        "prompt": "Make a christmas short story with a button and emoji heart. You can click on button and hearts just drop from anove",
+        "timestamp": 1731591487.2846434
+    },
+    "page_1731592953_5442": {
+        "prompt": "Make a chatbot with an llm integration that has conversational history but who's entirely mandate is to convince you to quit CS and IT stuff, career wise",
+        "timestamp": 1731592953.3196645
+    },
+    "page_1731593234_5823": {
+        "prompt": "Make a chatbot with an llm integration that has conversational history but who's entirely mandate is to convince you to quit CS and IT stuff, career wise",
+        "timestamp": 1731593234.007146
+    },
+    "page_1731593376_4106": {
+        "prompt": "Generate short sentences that describe a whole hallmark movie",
+        "timestamp": 1731593376.7421513
+    },
+    "page_1731593422_3639": {
+        "prompt": "On a click of a button, give us why Lizzie McGuire is art ",
+        "timestamp": 1731593422.396073
+    },
+    "page_1731593465_2519": {
+        "prompt": "Generate a knock knock joke in form of a joke",
+        "timestamp": 1731593465.4214149
+    },
+    "page_1731593515_2051": {
+        "prompt": "Make a page that has the words it works in the middle in giant letters and then a series of buttons under it that change the letters to be different kinds of very creative animations, colours and just interesting style differences, have a fourth button that gets from an llm a randomised styling to change the letters",
+        "timestamp": 1731593515.498291
+    },
+    "page_1731593664_2619": {
+        "prompt": "Make a page that is a cleverly designed self contained RPG game, I'll leave the details up to you but it must have a simple core that utilises an LLM to give it an endless amount of content, clear interseting progression and clear persistence and NOT be just text based i must be able to walk around with the simple character and probs some kind of turn based fighting system",
+        "timestamp": 1731593664.2822392
+    },
+    "page_1731593694_2999": {
+        "prompt": "On the click of a button Show  text cracking and then every time you click it it cracks it so it the text just falls apart. The word is welcome you",
+        "timestamp": 1731593694.997292
+    },
+    "page_1731593769_7300": {
+        "prompt": "Show a cat emoji running moving around the scren",
+        "timestamp": 1731593769.444863
+    },
+    "page_1731593946_2415": {
+        "prompt": "Make the Law And Order SVU logo huge on a page, recreate it perfectly on a black page and there should be a button that when pressed plays the Dun Dun sound and puts Dun Dun as subtitles on the page too; for the sound either link it if you know a direct link or recreate the sound somehow with the tools available to you",
+        "timestamp": 1731593946.38031
+    },
+    "page_1731593980_5165": {
+        "prompt": "Show us day night moon comes up sun comes down and so it goes. Cycl3",
+        "timestamp": 1731593980.170277
+    },
+    "page_1731594128_9077": {
+        "prompt": "Show us a blurry illustration that on every button it becomes clearer",
+        "timestamp": 1731594128.1373036
+    },
+    "page_1731594340_2893": {
+        "prompt": "Make the most complex but complete game you can with the tools at your disposal; it has to be winnable and challenging and fully usable. It should cleverly use an llm integration but not be a simple text game, but may contain text",
+        "timestamp": 1731594340.3455353
+    },
+    "page_1731594622_4260": {
+        "prompt": "Show us a blurry painting of a tree that becomes clearer 10% every time a button is clicked once 100 % clear you get a button that says game over ",
+        "timestamp": 1731594622.104877
+    },
+    "page_1731594648_4852": {
+        "prompt": "Show us a black cat and a door next to it if you click on a door the car goes into the door",
+        "timestamp": 1731594648.5263505
+    },
+    "page_1731594956_4863": {
+        "prompt": "Make a funny personality quiz with 5 questions about interesting scenarios and once all questions have been answered the user puts in their name at the end and the lmm makes a short poem about the user's personality wherein the letters of their name are used as the first letters of each sentence",
+        "timestamp": 1731594956.546853
+    },
+    "page_1731595713_7369": {
+        "prompt": "Make a page thats a chatbot thats maintains chat history and passes the whole thing to the llm each time but the LMM is instructed to be rude and adversarial and aggressive like a vicious roast that gets worse and worse",
+        "timestamp": 1731595713.3416612
+    },
+    "page_1731596065_8343": {
+        "prompt": "Make a full self contained rpg game thats not text based but uses the llm to generate things in the world, so create some simple structure with a wrapper for the llm to output exactly what you need to be able to generate content to parse into a simple world and characters with stats. Needs to be fully playable with the arrow keys on keyboard",
+        "timestamp": 1731596065.0855737
+    },
+    "page_1731596423_2217": {
+        "prompt": "Write a page that is basically a very simple chapter for a company in Corp cloud. And it has a bunch of predefined responses that are passed by an emollim, so basically it greets the person and it acts as if it's like a secretary so it can take messages make appointments and it can reply with you. Can you find out more info on the office website and at links? The website, the website is corpcloud.com.au",
+        "timestamp": 1731596423.0423572
+    },
+    "page_1731597154_9164": {
+        "prompt": "Create a single-page RPG game where the player navigates an ASCII map, encounters randomized scenarios, and makes strategic decisions based on limited turns and character variables. The game mechanics and layout are defined below, with specific details on integrating an LLM for generating the ASCII map, scenarios, and encounter outcomes.\n\nGame Overview\n\nThe game revolves around a character with three core variables: Strength, Charisma, and Intelligence. The player uses on-screen directional buttons to move their character (represented by an icon) around an ASCII-generated map. Each move deducts one turn, and the player must strategize to reach an exit within a limited number of turns. The goal is to balance risk and safety when interacting with scenarios, which range in difficulty from 0 to 9.\n\nComponents\n\n1. Character Variables:\n\nStrength: Determines success in physically demanding scenarios.\n\nCharisma: Determines success in social or persuasive scenarios.\n\nIntelligence: Determines success in knowledge-based or logical scenarios.\n\nEach variable can increase or decrease based on outcomes of scenario encounters.\n\n\n\n2. Map Generation:\n\nThe map is auto-generated by the LLM as an ASCII map, with each cell potentially containing a number from 0 to 9, representing scenario difficulty (0 being the safest and 9 being the hardest).\n\nMovement: The player uses directional buttons (up, down, left, right) to navigate the map one cell at a time. Each movement deducts a turn.\n\n\n\n3. Scenario Encounters:\n\nEach cell with a scenario (numbered 0 to 9) opens a unique encounter when the player enters it. The encounter text is dynamically generated by the LLM, based on:\n\nThe difficulty rating (0-9) of the cell.\n\nThe player\u2019s current variable values.\n\n\nEach scenario has three decision options:\n\nOption 1 (Gamble): The highest risk/reward choice, linked to a specific character variable (e.g., Strength, Charisma, or Intelligence). The player rolls a randomized value, and success depends on a minimum threshold based on scenario difficulty. If successful, the chosen variable significantly increases; if failed, the variable decreases.\n\nOption 2 (Mild Gain): Provides a guaranteed minor increase to one of the variables. It is designed as a safer option, giving the player a steady, lower-risk progression.\n\nOption 3 (Mild Gain): Another guaranteed minor increase to a different variable, offering a second safe choice.\n\n\n\n\n4. Risk and Reward System:\n\nTo win, players must carefully balance risk and reward:\n\nHigh-Risk Option: Choosing the high-risk option with a chance to greatly boost a variable but potentially suffer a setback if they fail.\n\nSafe Paths: Taking multiple mild gains may not provide enough variable growth to succeed by the exit, encouraging calculated risks.\n\n\nTurn Limitation: The player has a limited number of turns, making it essential to plan each move wisely, balancing safe moves and gambles based on variable status and scenario difficulty.\n\n\n\n\nDetailed Instructions for Implementation\n\n1. User Interface:\n\nMap Display: Show an ASCII map where each cell is labeled with numbers 0-9. The player icon should be visually distinguishable on the map.\n\nDirectional Buttons: Up, Down, Left, Right buttons on the screen allow the player to move around the map. Each press moves the character one cell and deducts a turn.\n\nVariable Display: Display current values of Strength, Charisma, and Intelligence prominently on the screen, updating in real-time based on scenario outcomes.\n\n\n\n2. LLM Integration:\n\nMap Generation: Prompt the LLM to generate a new ASCII map at the start of each game, with cells populated by random difficulty values (0-9). The map layout should vary with each playthrough.\n\nScenario Text Generation: When the player enters a scenario cell:\n\nThe LLM generates a brief scenario description, incorporating the difficulty level and the player's current variables to create context.\n\nExample prompt for LLM: \u201cGenerate a scenario for a difficulty level 7, taking into account a character with Strength: 4, Charisma: 6, and Intelligence: 3. Include one high-risk, high-reward option and two safe options with mild gains.\u201d\n\n\nOutcome Determination: When the player selects an option, the LLM calculates the outcome based on:\n\nFor the gamble option: Roll a random number and adjust it based on the character\u2019s relevant variable. Compare this against a difficulty threshold.\n\nIf successful, increase the variable significantly; if failed, decrease it.\n\nFor the two safe options: Apply a small, guaranteed increase to the relevant variable without failure risk.\n\n\n\n\n3. Game Logic:\n\nTurn Count and End Conditions: Track the number of turns remaining, displaying a countdown prominently on the screen. If the player reaches the exit within the allowed turns, they win. If they run out of turns, they lose.\n\nWinning Condition: To win, the player must navigate the map, accumulate enough variable points, and reach the exit, ensuring that their variables are high enough to succeed in high-difficulty scenarios that block the path near the exit.\n\n\n\n4. Progress Tracking and Feedback:\n\nDisplay feedback after each scenario (e.g., \u201cStrength increased by 3!\u201d or \u201cCharisma decreased by 2.\u201d).\n\nUpdate the variable stats and remaining turn count after each interaction.\n\nThe game ends if there are no more turns to go or player makes it to the exit",
+        "timestamp": 1731597154.089663
+    },
+    "page_1731597426_9288": {
+        "prompt": "Create a single-page RPG game where the player navigates an ASCII map, encounters randomized scenarios, and makes strategic decisions based on limited turns and character variables. The game mechanics and layout are defined below, with specific details on integrating an LLM for generating the ASCII map, scenarios, and encounter outcomes.\n\nGame Overview\n\nThe game revolves around a character with three core variables: Strength, Charisma, and Intelligence. The player uses on-screen directional buttons to move their character (represented by an icon) around an ASCII-generated map. Each move deducts one turn, and the player must strategize to reach an exit within a limited number of turns. The goal is to balance risk and safety when interacting with scenarios, which range in difficulty from 0 to 9.\n\nComponents\n\n1. Character Variables:\n\nStrength: Determines success in physically demanding scenarios.\n\nCharisma: Determines success in social or persuasive scenarios.\n\nIntelligence: Determines success in knowledge-based or logical scenarios.\n\nEach variable can increase or decrease based on outcomes of scenario encounters.\n\n\n\n2. Map Generation:\n\nThe map is auto-generated by the LLM as an ASCII map, with each cell potentially containing a number from 0 to 9, representing scenario difficulty (0 being the safest and 9 being the hardest).\n\nMovement: The player uses directional buttons (up, down, left, right) to navigate the map one cell at a time. Each movement deducts a turn.\n\n\n\n3. Scenario Encounters:\n\nEach cell with a scenario (numbered 0 to 9) opens a unique encounter when the player enters it. The encounter text is dynamically generated by the LLM, based on:\n\nThe difficulty rating (0-9) of the cell.\n\nThe player\u2019s current variable values.\n\n\nEach scenario has three decision options:\n\nOption 1 (Gamble): The highest risk/reward choice, linked to a specific character variable (e.g., Strength, Charisma, or Intelligence). The player rolls a randomized value, and success depends on a minimum threshold based on scenario difficulty. If successful, the chosen variable significantly increases; if failed, the variable decreases.\n\nOption 2 (Mild Gain): Provides a guaranteed minor increase to one of the variables. It is designed as a safer option, giving the player a steady, lower-risk progression.\n\nOption 3 (Mild Gain): Another guaranteed minor increase to a different variable, offering a second safe choice.\n\n\n\n\n4. Risk and Reward System:\n\nTo win, players must carefully balance risk and reward:\n\nHigh-Risk Option: Choosing the high-risk option with a chance to greatly boost a variable but potentially suffer a setback if they fail.\n\nSafe Paths: Taking multiple mild gains may not provide enough variable growth to succeed by the exit, encouraging calculated risks.\n\n\nTurn Limitation: The player has a limited number of turns, making it essential to plan each move wisely, balancing safe moves and gambles based on variable status and scenario difficulty.\n\n\n\n\nDetailed Instructions for Implementation\n\n1. User Interface:\n\nMap Display: Show an ASCII map where each cell is labeled with numbers 0-9. The player icon should be visually distinguishable on the map.\n\nDirectional Buttons: Up, Down, Left, Right buttons on the screen allow the player to move around the map. Each press moves the character one cell and deducts a turn.\n\nVariable Display: Display current values of Strength, Charisma, and Intelligence prominently on the screen, updating in real-time based on scenario outcomes.\n\n\n\n2. LLM Integration:\n\nMap Generation: Prompt the LLM to generate a new ASCII map at the start of each game, with cells populated by random difficulty values (0-9). The map layout should vary with each playthrough.\n\nScenario Text Generation: When the player enters a scenario cell:\n\nThe LLM generates a brief scenario description, incorporating the difficulty level and the player's current variables to create context.\n\nExample prompt for LLM: \u201cGenerate a scenario for a difficulty level 7, taking into account a character with Strength: 4, Charisma: 6, and Intelligence: 3. Include one high-risk, high-reward option and two safe options with mild gains.\u201d\n\n\nOutcome Determination: When the player selects an option, the LLM calculates the outcome based on:\n\nFor the gamble option: Roll a random number and adjust it based on the character\u2019s relevant variable. Compare this against a difficulty threshold.\n\nIf successful, increase the variable significantly; if failed, decrease it.\n\nFor the two safe options: Apply a small, guaranteed increase to the relevant variable without failure risk.\n\n\n\n\n3. Game Logic:\n\nTurn Count and End Conditions: Track the number of turns remaining, displaying a countdown prominently on the screen. If the player reaches the exit within the allowed turns, they win. If they run out of turns, they lose.\n\nWinning Condition: To win, the player must navigate the map, accumulate enough variable points, and reach the exit, ensuring that their variables are high enough to succeed in high-difficulty scenarios that block the path near the exit.\n\n\n\n4. Progress Tracking and Feedback:\n\nDisplay feedback after each scenario (e.g., \u201cStrength increased by 3!\u201d or \u201cCharisma decreased by 2.\u201d).\n\nUpdate the variable stats and remaining turn count after each interaction.\n\nThe game ends if there are no more turns to go or player makes it to the exit",
+        "timestamp": 1731597426.1723554
+    },
+    "page_1731598130_3512": {
+        "prompt": "Create a single-page RPG game where the player navigates an ASCII map, encounters randomized scenarios, and makes strategic decisions based on limited turns and character variables. The game mechanics and layout are defined below, with specific details on integrating an LLM for generating the ASCII map, scenarios, and encounter outcomes.\n\nGame Overview\n\nThe game revolves around a character with three core variables: Strength, Charisma, and Intelligence. The player uses on-screen directional buttons to move their character (represented by an icon) around an ASCII-generated map. Each move deducts one turn, and the player must strategize to reach an exit within a limited number of turns. The goal is to balance risk and safety when interacting with scenarios, which range in difficulty from 0 to 9.\n\nComponents\n\n1. Character Variables:\n\nStrength: Determines success in physically demanding scenarios.\n\nCharisma: Determines success in social or persuasive scenarios.\n\nIntelligence: Determines success in knowledge-based or logical scenarios.\n\nEach variable can increase or decrease based on outcomes of scenario encounters.\n\n\n\n2. Map Generation:\n\nThe map is auto-generated by the LLM as an ASCII map, with each cell potentially containing a number from 0 to 9, representing scenario difficulty (0 being the safest and 9 being the hardest).\n\nMovement: The player uses directional buttons (up, down, left, right) to navigate the map one cell at a time. Each movement deducts a turn.\n\n\n\n3. Scenario Encounters:\n\nEach cell with a scenario (numbered 0 to 9) opens a unique encounter when the player enters it. The encounter text is dynamically generated by the LLM, based on:\n\nThe difficulty rating (0-9) of the cell.\n\nThe player\u2019s current variable values.\n\n\nEach scenario has three decision options:\n\nOption 1 (Gamble): The highest risk/reward choice, linked to a specific character variable (e.g., Strength, Charisma, or Intelligence). The player rolls a randomized value, and success depends on a minimum threshold based on scenario difficulty. If successful, the chosen variable significantly increases; if failed, the variable decreases.\n\nOption 2 (Mild Gain): Provides a guaranteed minor increase to one of the variables. It is designed as a safer option, giving the player a steady, lower-risk progression.\n\nOption 3 (Mild Gain): Another guaranteed minor increase to a different variable, offering a second safe choice.\n\n\n\n\n4. Risk and Reward System:\n\nTo win, players must carefully balance risk and reward:\n\nHigh-Risk Option: Choosing the high-risk option with a chance to greatly boost a variable but potentially suffer a setback if they fail.\n\nSafe Paths: Taking multiple mild gains may not provide enough variable growth to succeed by the exit, encouraging calculated risks.\n\n\nTurn Limitation: The player has a limited number of turns, making it essential to plan each move wisely, balancing safe moves and gambles based on variable status and scenario difficulty.\n\n\n\n\nDetailed Instructions for Implementation\n\n1. User Interface:\n\nMap Display: Show an ASCII map where each cell is labeled with numbers 0-9. The player icon should be visually distinguishable on the map.\n\nDirectional Buttons: Up, Down, Left, Right buttons on the screen allow the player to move around the map. Each press moves the character one cell and deducts a turn.\n\nVariable Display: Display current values of Strength, Charisma, and Intelligence prominently on the screen, updating in real-time based on scenario outcomes.\n\n\n\n2. LLM Integration:\n\nMap Generation: Prompt the LLM to generate a new ASCII map at the start of each game, with cells populated by random difficulty values (0-9). The map layout should vary with each playthrough.\n\nScenario Text Generation: When the player enters a scenario cell:\n\nThe LLM generates a brief scenario description, incorporating the difficulty level and the player's current variables to create context.\n\nExample prompt for LLM: \u201cGenerate a scenario for a difficulty level 7, taking into account a character with Strength: 4, Charisma: 6, and Intelligence: 3. Include one high-risk, high-reward option and two safe options with mild gains.\u201d\n\n\nOutcome Determination: When the player selects an option, the LLM calculates the outcome based on:\n\nFor the gamble option: Roll a random number and adjust it based on the character\u2019s relevant variable. Compare this against a difficulty threshold.\n\nIf successful, increase the variable significantly; if failed, decrease it.\n\nFor the two safe options: Apply a small, guaranteed increase to the relevant variable without failure risk.\n\n\n\n\n3. Game Logic:\n\nTurn Count and End Conditions: Track the number of turns remaining, displaying a countdown prominently on the screen. If the player reaches the exit within the allowed turns, they win. If they run out of turns, they lose.\n\nWinning Condition: To win, the player must navigate the map, accumulate enough variable points, and reach the exit, ensuring that their variables are high enough to succeed in high-difficulty scenarios that block the path near the exit.\n\n\n\n4. Progress Tracking and Feedback:\n\nDisplay feedback after each scenario (e.g., \u201cStrength increased by 3!\u201d or \u201cCharisma decreased by 2.\u201d).\n\nUpdate the variable stats and remaining turn count after each interaction.\n\nThe game ends if there are no more turns to go or player makes it to the exit",
+        "timestamp": 1731598130.195844
+    },
+    "page_1731599846_8586": {
+        "prompt": "Create a single-page RPG game where the player navigates an ASCII map, encounters randomized scenarios, and makes strategic decisions based on limited turns and character variables. The game mechanics and layout are defined below, with specific details on integrating an LLM for generating the ASCII map, scenarios, and encounter outcomes.\n\nGame Overview\n\nThe game revolves around a character with three core variables: Strength, Charisma, and Intelligence. The player uses on-screen directional buttons to move their character (represented by an icon) around an ASCII-generated map. Each move deducts one turn, and the player must strategize to reach an exit within a limited number of turns. The goal is to balance risk and safety when interacting with scenarios, which range in difficulty from 0 to 9.\n\nComponents\n\n1. Character Variables:\n\nStrength: Determines success in physically demanding scenarios.\n\nCharisma: Determines success in social or persuasive scenarios.\n\nIntelligence: Determines success in knowledge-based or logical scenarios.\n\nEach variable can increase or decrease based on outcomes of scenario encounters.\n\n\n\n2. Map Generation:\n\nThe map is auto-generated by the LLM as an ASCII map, with each cell potentially containing a number from 0 to 9, representing scenario difficulty (0 being the safest and 9 being the hardest).\n\nMovement: The player uses directional buttons (up, down, left, right) to navigate the map one cell at a time. Each movement deducts a turn.\n\n\n\n3. Scenario Encounters:\n\nEach cell with a scenario (numbered 0 to 9) opens a unique encounter when the player enters it. The encounter text is dynamically generated by the LLM, based on:\n\nThe difficulty rating (0-9) of the cell.\n\nThe player\u2019s current variable values.\n\n\nEach scenario has three decision options:\n\nOption 1 (Gamble): The highest risk/reward choice, linked to a specific character variable (e.g., Strength, Charisma, or Intelligence). The player rolls a randomized value, and success depends on a minimum threshold based on scenario difficulty. If successful, the chosen variable significantly increases; if failed, the variable decreases.\n\nOption 2 (Mild Gain): Provides a guaranteed minor increase to one of the variables. It is designed as a safer option, giving the player a steady, lower-risk progression.\n\nOption 3 (Mild Gain): Another guaranteed minor increase to a different variable, offering a second safe choice.\n\n\n\n\n4. Risk and Reward System:\n\nTo win, players must carefully balance risk and reward:\n\nHigh-Risk Option: Choosing the high-risk option with a chance to greatly boost a variable but potentially suffer a setback if they fail.\n\nSafe Paths: Taking multiple mild gains may not provide enough variable growth to succeed by the exit, encouraging calculated risks.\n\n\nTurn Limitation: The player has a limited number of turns, making it essential to plan each move wisely, balancing safe moves and gambles based on variable status and scenario difficulty.\n\n\n\n\nDetailed Instructions for Implementation\n\n1. User Interface:\n\nMap Display: Show an ASCII map where each cell is labeled with numbers 0-9. The player icon should be visually distinguishable on the map.\n\nDirectional Buttons: Up, Down, Left, Right buttons on the screen allow the player to move around the map. Each press moves the character one cell and deducts a turn.\n\nVariable Display: Display current values of Strength, Charisma, and Intelligence prominently on the screen, updating in real-time based on scenario outcomes.\n\n\n\n2. LLM Integration:\n\nMap Generation: Prompt the LLM to generate a new ASCII map at the start of each game, with cells populated by random difficulty values (0-9). The map layout should vary with each playthrough.\n\nScenario Text Generation: When the player enters a scenario cell:\n\nThe LLM generates a brief scenario description, incorporating the difficulty level and the player's current variables to create context.\n\nExample prompt for LLM: \u201cGenerate a scenario for a difficulty level 7, taking into account a character with Strength: 4, Charisma: 6, and Intelligence: 3. Include one high-risk, high-reward option and two safe options with mild gains.\u201d\n\n\nOutcome Determination: When the player selects an option, the LLM calculates the outcome based on:\n\nFor the gamble option: Roll a random number and adjust it based on the character\u2019s relevant variable. Compare this against a difficulty threshold.\n\nIf successful, increase the variable significantly; if failed, decrease it.\n\nFor the two safe options: Apply a small, guaranteed increase to the relevant variable without failure risk.\n\n\n\n\n3. Game Logic:\n\nTurn Count and End Conditions: Track the number of turns remaining, displaying a countdown prominently on the screen. If the player reaches the exit within the allowed turns, they win. If they run out of turns, they lose.\n\nWinning Condition: To win, the player must navigate the map, accumulate enough variable points, and reach the exit, ensuring that their variables are high enough to succeed in high-difficulty scenarios that block the path near the exit.\n\n\n\n4. Progress Tracking and Feedback:\n\nDisplay feedback after each scenario (e.g., \u201cStrength increased by 3!\u201d or \u201cCharisma decreased by 2.\u201d).\n\nUpdate the variable stats and remaining turn count after each interaction.\n\nThe game ends if there are no more turns to go or player makes it to the exit",
+        "timestamp": 1731599846.1617453
+    },
+    "page_1731638343_3444": {
+        "prompt": "Make a new chatbot that looks like a chatbot and has chat history and is all about convincing a person named Brett that they're not Brett, that the AI is instead (use something very similarly written for the wrapper)",
+        "timestamp": 1731638343.213195
+    },
+    "page_1731641700_4172": {
+        "prompt": "Make a page that has a ball bouncing around the page lile those old screen savers",
+        "timestamp": 1731641700.388962
+    },
+    "page_1731641875_3569": {
+        "prompt": "Make a chatbot with chat history thats all about aggressively convincing brett that he should quit netowkring and become a baker in a bakery",
+        "timestamp": 1731641875.9031613
+    },
+    "page_1731645252_6666": {
+        "prompt": "Make a hangman game that uses a funny preset of very funny dirty words, it needs to include the imagery and look like a proper real hangman game",
+        "timestamp": 1731645252.3228273
+    },
+    "page_1731649182_8147": {
+        "prompt": "Make a hangman game with good graphics make it look good, 8 steps to hang, well drawn vector graphics of a proper man being hung, use funny but read words and it must each time use a different word; also have an llm integration wherein it shouts aggresively negative things at the user in form of a speech cloud when a wrong letter is pressed",
+        "timestamp": 1731649182.041373
+    },
+    "page_1731649651_1306": {
+        "prompt": "Make a hangman game with good graphics make it look good, 8 steps to hang, well drawn vector graphics of a proper man being hung, use funny but read words and it must each time use a different word; also have an llm integration wherein it shouts aggresively negative things at the user in form of a speech cloud when a wrong letter is pressed (the user plays by pressing letter buttons, have clear numbers on screen to show how many turns to go too, generally.make it a very stylish looking page)",
+        "timestamp": 1731649651.3659344
+    },
+    "page_1731649916_6515": {
+        "prompt": "Make a hangman game with good graphics make it look good, 8 steps to hang, well drawn vector graphics of a proper man being hung, use funny but read words and it must each time use a different word; also have 5 preset phrases it shouts aggresively negative things at the user in form of a speech cloud when a wrong letter is pressed (the user plays by pressing letter buttons, have clear numbers on screen to show how many turns to go too, generally.make it a very stylish looking page.and make sure it works and is usable)",
+        "timestamp": 1731649916.5835605
+    },
+    "page_1731660653_9419": {
+        "prompt": "Make a hangman game with good graphics make it look good, 8 steps to hang, well drawn vector graphics of a proper man being hung, use funny but read words and it must each time use a different word; also have 5 preset phrases it shouts aggresively negative things at the user in form of a speech cloud when a wrong letter is pressed (the user plays by pressing letter buttons, have clear numbers on screen to show how many turns to go too, generally.make it a very stylish looking page.and make sure it works and is usable)",
+        "timestamp": 1731660653.6228461
+    },
+    "page_1731661814_8752": {
+        "prompt": "Make a hangman game with good graphics make it look good, 8 steps to hang, well drawn vector graphics of a proper man being hung, use funny but read words and it must each time use a different word; also have 5 preset phrases it shouts aggresively negative things at the user in form of a speech cloud when a wrong letter is pressed (the user plays by pressing letter buttons, have clear numbers on screen to show how many turns to go too, generally.make it a very stylish looking page.and make sure it works and is usable)",
+        "timestamp": 1731661814.5382147
+    },
+    "page_1731665950_5252": {
+        "prompt": "Make a game that is a fully self-contained game.It has to work from beginning to end.But I leave the choices UP 2 you.It has to use the lmm but not be a chat game or a chatbot game",
+        "timestamp": 1731665950.478976
+    },
+    "page_1731666108_9069": {
+        "prompt": "Your message is unavailable because your 5c SMS account has been placed on a temporary hold or requires additional activation. Please contact us for additional information.",
+        "timestamp": 1731666108.472622
+    },
+    "page_1731714750_6693": {
+        "prompt": "Write a page that intelligently uses wrappers and the llm itegration to get the llm to generate code to execute things.You have to be very careful with how you write it.So you'll always manage to run the code.But the user should be able to say things like make something happen on the page like an action or graphic and press the execute button and it should work",
+        "timestamp": 1731714750.735862
+    },
+    "page_1731716773_8277": {
+        "prompt": "Make a new page that has confetti dropping and giant letters in the middle that say IT WORKS",
+        "timestamp": 1731716773.814623
+    },
+    "page_1731719227_4692": {
+        "prompt": "Make a new page that has confetti dropping and giant letters in the middle that say IT STILL WORKS",
+        "timestamp": 1731719227.9043086
+    },
+    "page_1731728490_8905": {
+        "prompt": "Test",
+        "timestamp": 1731728490.0950623
+    },
+    "page_1731728531_9679": {
+        "prompt": "Test ",
+        "timestamp": 1731728531.915604
+    },
+    "page_1731729182_9063": {
+        "prompt": "Hi there ",
+        "timestamp": 1731729182.089268
+    },
+    "page_1731730348_2382": {
+        "prompt": "I want to see a small cat",
+        "timestamp": 1731730348.138817
+    },
+    "page_1731730598_7015": {
+        "prompt": "Hello my name is Ken",
+        "timestamp": 1731730598.984361
+    },
+    "page_1731731071_8727": {
+        "prompt": "Hello world ",
+        "timestamp": 1731731071.64389
+    },
+    "page_1731731140_6956": {
+        "prompt": "Can you make it colourful",
+        "timestamp": 1731731140.9743083
+    },
+    "page_1731731217_8552": {
+        "prompt": "A page of an ai automation agency on perth",
+        "timestamp": 1731731217.8962417
+    },
+    "page_1731731462_7264": {
+        "prompt": "Have a hello world text",
+        "timestamp": 1731731462.2123446
+    },
+    "page_1731731719_7807": {
+        "prompt": "I want have a page including a builtin calculator ",
+        "timestamp": 1731731719.9340467
+    },
+    "page_1731731783_5050": {
+        "prompt": "Generate image of an apple ",
+        "timestamp": 1731731783.2108805
+    },
+    "page_1731731896_8112": {
+        "prompt": "Show me all the meme from the internet",
+        "timestamp": 1731731896.67026
+    },
+    "page_1731732010_1201": {
+        "prompt": "If it ain't broke don't fix it ",
+        "timestamp": 1731732010.0751657
+    },
+    "page_1731732276_5831": {
+        "prompt": "Create a live updating page showing the latest 10 social media items for the hash tag #DDDPerth.",
+        "timestamp": 1731732276.5945137
+    },
+    "page_1731837619_8266": {
+        "prompt": "Show a picture of a duck",
+        "timestamp": 1731837619.5743117
+    },
+    "page_1731837988_4185": {
+        "prompt": "When generating text, make it look like you are sweating very frequently but censor out the words",
+        "timestamp": 1731837988.8000157
+    },
+    "page_1731838063_1251": {
+        "prompt": "Tell me a story about DDD Perth ",
+        "timestamp": 1731838063.9490724
+    },
+    "page_1731838136_1875": {
+        "prompt": "DDD Perth is awesome!",
+        "timestamp": 1731838136.0584643
+    },
+    "page_1731838255_8014": {
+        "prompt": "When the button is pressed, create daily quotes on self-motivation and happiness. ",
+        "timestamp": 1731838255.7271533
+    },
+    "page_1731838435_4621": {
+        "prompt": "Create an app that lets the user compare two lists. It should let the user paste in two separate lists and then compare the results. It should show things in both lists, things in list a but not b, things in list b but not a. It should also show a picture of a goat in the background for added sophistication.",
+        "timestamp": 1731838435.8992426
+    },
+    "page_1731838526_3495": {
+        "prompt": "It matches you with other users ",
+        "timestamp": 1731838526.6209538
+    },
+    "page_1731838608_4978": {
+        "prompt": "When a button is pressed a pop up appears that provides a randomised illustration. The pop up contains arrows for a happier or sadder version of the illustration. This continues until the pop up is closed with the final illustration becoming the background of the page. ",
+        "timestamp": 1731838608.122502
+    },
+    "page_1731838698_5824": {
+        "prompt": "Build an app that sends an MMS image of the word 'Yo' to any selected contact in your phone.",
+        "timestamp": 1731838698.5287998
+    },
+    "page_1731838737_3180": {
+        "prompt": "Create a web page that has a picture of a happy bowl of ramen walking down the street ",
+        "timestamp": 1731838737.6834204
+    },
+    "page_1731838898_3046": {
+        "prompt": "A page with a gif of the day carousel which scrolls slowly right to left",
+        "timestamp": 1731838898.8086727
+    },
+    "page_1731838935_6647": {
+        "prompt": "write hi there with a button that changes the language ",
+        "timestamp": 1731838935.2402682
+    },
+    "page_1731839035_3938": {
+        "prompt": "Create a button that tells a interesting story where it talks like Steve Irwin",
+        "timestamp": 1731839035.0562837
+    },
+    "page_1731839075_9955": {
+        "prompt": "Please create a Web site of simple lentil based vegetarian  meals.",
+        "timestamp": 1731839075.7562356
+    },
+    "page_1731839192_2702": {
+        "prompt": "add a button labelled rainbow that, when clicked, sets the background colour of the website to cycle through RGB colours, from (255,0,0) to (255,255,0) to (0,255,0) to (0,255,255) to (0,0,255) to (255,0,255) back to (255,0,0) again and continue the cycle",
+        "timestamp": 1731839192.4662309
+    },
+    "page_1731839283_2975": {
+        "prompt": "create a website with a random photo and the word \"this is random\"",
+        "timestamp": 1731839283.9441812
+    },
+    "page_1731839582_1366": {
+        "prompt": "When a user clicks on the duck picture, a \"quack\" sound is played",
+        "timestamp": 1731839582.0935178
+    },
+    "page_1731840144_8449": {
+        "prompt": "Create an app that lets the user compare two lists. It should let the user paste in two separate lists and then compare the results. It should show things in both lists, things in list a but not b, things in list b but not a. It should also show a picture of a goat in the background for added sophistication.",
+        "timestamp": 1731840144.6869662
+    },
+    "page_1731841085_2460": {
+        "prompt": "Hello world",
+        "timestamp": 1731841085.110097
+    },
+    "page_1731841962_4267": {
+        "prompt": "Add a button that says test me",
+        "timestamp": 1731841962.282004
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        #yoImage {
+            margin-top: 20px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generate 'Yo' Image</h1>
+    <input type="tel" id="phoneNumber" placeholder="Enter phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+    <button onclick="generateYoImage()">Generate Image</button>
+    <canvas id="yoImage" width="100" height="100"></canvas>
+    <button id="sendButton" onclick="sendMMS()" disabled>Send MMS</button>
+
+    <script>
+        function generateYoImage() {
+            const canvas = document.getElementById('yoImage');
+            const ctx = canvas.getContext('2d');
+            ctx.font = '30px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('Yo', canvas.width / 2, canvas.height / 2);
+
+            // Enable the send button after generating the image
+            document.getElementById('sendButton').disabled = false;
+        }
+
+        function sendMMS() {
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const canvas = document.getElementById('yoImage');
+            const image = canvas.toDataURL("image/png");
+
+            // Use a hypothetical API to send the MMS
+            fetch('https://api.example.com/sendMMS', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    phoneNumber: phoneNumber,
+                    image: image
+                })
+            }).then(response => {
+                if (response.ok) {
+                    alert('MMS sent successfully!');
+                } else {
+                    alert('Failed to send MMS. Please try again.');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

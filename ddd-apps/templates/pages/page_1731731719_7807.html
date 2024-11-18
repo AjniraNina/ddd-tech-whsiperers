@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            max-width: 200px;
+            gap: 1px;
+            background-color: #999;
+        }
+        #calculator > button {
+            padding: 20px;
+            font-size: 20px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        #calculator > button:active {
+            background-color: #ccc;
+        }
+        #calculator > #display {
+            grid-column: span 4;
+            background-color: #fff;
+            text-align: right;
+            padding: 10px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <div id="display">0</div>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>/</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>*</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>-</button>
+        <button>0</button>
+        <button>.</button>
+        <button>=</button>
+        <button>+</button>
+    </div>
+    <script>
+        const display = document.querySelector('#display');
+        let operand1 = '';
+        let operand2 = '';
+        let operator = null;
+
+        document.querySelectorAll('#calculator > button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.textContent;
+
+                if (content >= '0' && content <= '9' || content === '.') {
+                    if (operator === null) {
+                        operand1 += content;
+                        display.textContent = operand1;
+                    } else {
+                        operand2 += content;
+                        display.textContent = operand2;
+                    }
+                } else if (content === '+' || content === '-' || content === '*' || content === '/') {
+                    operator = content;
+                } else if (content === '=') {
+                    operand1 = eval(operand1 + operator + operand2).toString();
+                    operand2 = '';
+                    operator = null;
+                    display.textContent = operand1;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

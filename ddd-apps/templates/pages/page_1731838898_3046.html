@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        #app {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #content {
+            display: flex;
+            animation: scroll 20s linear infinite;
+        }
+        #content img {
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="content"></div>
+    </div>
+    <script>
+        const gifs = [
+            'https://media.giphy.com/media/3o7aTskHEUdgCQAXde/giphy.gif',
+            'https://media.giphy.com/media/3o7aTskHEUdgCQAXde/giphy.gif',
+            'https://media.giphy.com/media/3o7aTskHEUdgCQAXde/giphy.gif',
+            'https://media.giphy.com/media/3o7aTskHEUdgCQAXde/giphy.gif',
+            'https://media.giphy.com/media/3o7aTskHEUdgCQAXde/giphy.gif'
+        ];
+        const content = document.getElementById('content');
+        gifs.forEach(gif => {
+            const img = document.createElement('img');
+            img.src = gif;
+            content.appendChild(img);
+        });
+        content.innerHTML += content.innerHTML;  // Duplicate content for infinite scroll effect
+    </script>
+</body>
+</html>

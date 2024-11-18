@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background-color 1s;
+        }
+
+        #rainbowButton {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="rainbowButton">Rainbow</button>
+
+    <script>
+        var colors = [
+            { r: 255, g: 0, b: 0 },
+            { r: 255, g: 255, b: 0 },
+            { r: 0, g: 255, b: 0 },
+            { r: 0, g: 255, b: 255 },
+            { r: 0, g: 0, b: 255 },
+            { r: 255, g: 0, b: 255 }
+        ];
+        var currentColorIndex = 0;
+        var intervalId = null;
+
+        function changeBackgroundColor() {
+            var color = colors[currentColorIndex];
+            document.body.style.backgroundColor = 'rgb(' + color.r + ',' + color.g + ',' + color.b + ')';
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        }
+
+        document.getElementById('rainbowButton').addEventListener('click', function() {
+            if (intervalId) {
+                clearInterval(intervalId);
+                intervalId = null;
+                this.textContent = 'Rainbow';
+            } else {
+                changeBackgroundColor();
+                intervalId = setInterval(changeBackgroundColor, 1000);
+                this.textContent = 'Stop';
+            }
+        });
+    </script>
+</body>
+</html>

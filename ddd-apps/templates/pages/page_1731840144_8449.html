@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: url('https://images.unsplash.com/photo-1560807707-8cc77767d783?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60') fixed;
+            background-size: cover;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+        }
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            margin-bottom: 10px;
+        }
+        button {
+            margin-bottom: 20px;
+        }
+        .result {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>List Comparator</h1>
+        <textarea id="listA" placeholder="Enter list A items..."></textarea>
+        <textarea id="listB" placeholder="Enter list B items..."></textarea>
+        <button id="compareBtn">Compare Lists</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('compareBtn').addEventListener('click', function() {
+            var listA = document.getElementById('listA').value.split('\n');
+            var listB = document.getElementById('listB').value.split('\n');
+
+            var both = listA.filter(value => listB.includes(value));
+            var onlyA = listA.filter(value => !listB.includes(value));
+            var onlyB = listB.filter(value => !listA.includes(value));
+
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '';
+
+            if (both.length > 0) {
+                resultDiv.innerHTML += '<div class="result"><strong>In both lists:</strong><br>' + both.join('<br>') + '</div>';
+            }
+            if (onlyA.length > 0) {
+                resultDiv.innerHTML += '<div class="result"><strong>In list A only:</strong><br>' + onlyA.join('<br>') + '</div>';
+            }
+            if (onlyB.length > 0) {
+                resultDiv.innerHTML += '<div class="result"><strong>In list B only:</strong><br>' + onlyB.join('<br>') + '</div>';
+            }
+        });
+    </script>
+</body>
+</html>

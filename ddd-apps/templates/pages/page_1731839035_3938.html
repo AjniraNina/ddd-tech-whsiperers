@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        #app {
+            text-align: center;
+        }
+        #story {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        #loader {
+            display: none;
+        }
+        #error {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button id="generateStory">Generate Story</button>
+        <div id="story"></div>
+        <div id="loader">Loading...</div>
+        <div id="error"></div>
+    </div>
+
+    <script>
+        class AIHandler {
+            constructor(role, expectedType = 'text') {
+                this.role = role;
+                this.expectedType = expectedType;
+                this.elements = {
+                    app: document.getElementById('app'),
+                    story: document.getElementById('story'),
+                    loader: document.getElementById('loader'),
+                    error: document.getElementById('error'),
+                    generateStory: document.getElementById('generateStory')
+                };
+
+                Object.entries(this.elements).forEach(([key, el]) => {
+                    if (!el) throw new Error(`Required element #${key} not found`);
+                });
+            }
+
+            async generate(prompt) {
+                try {
+                    this._setLoading(true);
+                    const response = await fetch('/api/llm/interact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            role: this.role,
+                            prompt,
+                            expect: this.expectedType
+                        })
+                    });
+
+                    const result = await response.json();
+                    if (!result.success) throw new Error(result.error);
+                    return result.data;
+                } catch (error) {
+                    this._handleError(error);
+                    throw error;
+                } finally {
+                    this._setLoading(false);
+                }
+            }
+
+            _setLoading(isLoading) {
+                this.elements.loader.style.display = isLoading ? 'block' : 'none';
+                this.elements.generateStory.style.opacity = isLoading ? '0.5' : '1';
+                this.elements.generateStory.style.pointerEvents = isLoading ? 'none' : 'auto';
+                document.querySelectorAll('button').forEach(el => 
+                    el.disabled = isLoading
+                );
+            }
+
+            _handleError(error) {
+                console.error(error);
+                this.elements.error.textContent = error.message;
+                this.elements.error.style.display = 'block';
+                setTimeout(() => this.elements.error.style.display = 'none', 5000);
+            }
+        }
+
+        const ai = new AIHandler("a storyteller in the style of Steve Irwin");
+
+        document.getElementById('generateStory').addEventListener('click', async () => {
+            try {
+                const story = await ai.generate("Tell me a story about an adventure in the wild.");
+                document.getElementById('story').textContent = story;
+            } catch (error) {
+                console.error(error);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Matcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .user {
+            border: 1px solid #000;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .match {
+            color: green;
+        }
+        .no-match {
+            color: red;
+        }
+    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>User Matcher</h1>
+    <p>Enter your interests and we'll match you with other users who share them!</p>
+    <form id="userForm">
+        <label for="interests">Your Interests (comma separated):</label><br>
+        <input type="text" id="interests" name="interests"><br>
+        <input type="submit" value="Find Matches">
+    </form>
+    <div id="matches"></div>
+
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var interests = document.getElementById('interests').value.split(',');
+            var users = [
+                {name: 'User 1', interests: ['music', 'movies', 'sports']},
+                {name: 'User 2', interests: ['cooking', 'traveling', 'music']},
+                {name: 'User 3', interests: ['reading', 'movies', 'cooking']},
+                {name: 'User 4', interests: ['sports', 'traveling', 'reading']}
+            ];
+            var matches = document.getElementById('matches');
+            matches.innerHTML = '';
+            users.forEach(function(user) {
+                var match = false;
+                user.interests.forEach(function(interest) {
+                    if (interests.includes(interest)) {
+                        match = true;
+                    }
+                });
+                var userDiv = document.createElement('div');
+                userDiv.className = 'user';
+                userDiv.innerHTML = '<strong>' + user.name + '</strong><br>' +
+                    'Interests: ' + user.interests.join(', ') + '<br>' +
+                    (match ? '<span class="match">Match!</span>' : '<span class="no-match">No Match</span>');
+                matches.appendChild(userDiv);
+            });
+        });
+    </script>
+</body>
+</html>
