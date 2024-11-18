@@ -1,8 +1,8 @@
 # ddd-tech-whsiperrers
-Welcome to the Interactive App Assembly repository! 🎉 This project showcases the apps we collaboratively built live during our presentation, demonstrating the power of audience participation and AI-assisted programming
+Welcome to the Interactive App Assembly repository! 🎉 This project showcases the apps we collaboratively built live during our presentation.
 
 Getting Started
-To find visuals and recordings of the apps we created on the day open folder: "generated apps"
+To find visuals and recordings of the apps we created on the day open folder: "generated apps" in ddd-apps folder.
 
 To run any of the apps in this repository, you'll need the following:
 
