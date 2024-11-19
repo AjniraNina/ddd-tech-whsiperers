@@ -16,8 +16,8 @@ How to Run the Apps
 Clone this repository to your local machine:
 
 
-git clone https://github.com/AjniraNina/ddd-tech-whsiperrers.git  
-cd ddd-tech-whsiperrers  
+git clone https://github.com/AjniraNina/ddd-tech-whsiperers.git  
+cd ddd-tech-whsiperers  
 Install required dependencies:
 
 pip install -r requirements.txt  
